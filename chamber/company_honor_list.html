@@ -1,0 +1,24 @@
+<div ng-controller="company_honor_list">
+	<!--缓存加载-->
+	<!--<div ng-if='!loaddingHide'>
+		<div id="dd" class="load-container load6"></div>
+		<p class="loadP">玩命加载中...</p>
+	</div>-->
+	<!-- dialist top end -->
+	<!-- dialist center start -->
+	<div class="con_pic dialist_pic">
+		<ul class="dialist_ul">
+			<li>
+				<h4>{{companyHonorList.title}}</h4>
+			</li>
+			<li>
+				<p>{{companyHonorList.createDate|bigDate}}&nbsp;<span>{{companyHonorList.typeId|ctnName}}</span></p>
+			</li>
+			<li class="content">
+				
+			</li>
+		</ul>
+	</div>
+	<!-- dialist center end -->
+</div>
+<div ui-view></div>

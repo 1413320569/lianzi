@@ -1,0 +1,68 @@
+<div ng-controller="summary">
+	<!--模块空白-->
+	<h4 class="noData" ng-if='noData'>该组织暂无发布动态 </h4>
+	<!--缓存加载-->
+	<!--<div ng-if='!loaddingHide'>
+		<div id="dd" class="load-container load6"></div>
+		<p class="loadP">玩命加载中...</p>
+	</div>-->
+	<!-- consult top end -->
+	<!-- consult center start --><br />
+	<div ng-show='!noData'>
+		<div class="summary_p">
+			<div class="summary_box">
+				<p>{{data.mainDesc}}</p>
+			</div>
+			<ul>
+				<li>
+					<b>成立时间：</b>
+					<span>
+            {{data.createDate|detailTime}}
+           </span>
+				</li>
+				<li>
+					<b>发&nbsp;起&nbsp;人：</b>
+					<span>{{data.creator}}</span>
+				</li>
+				<li>
+					<b>商会性质：</b>
+					<span>{{data.nature}}</span>
+				</li>
+				<li>
+					<b>领&nbsp;导&nbsp;人：</b>
+					<span>{{data.leader}}</span>
+				</li>
+				<li>
+					<b>会员人数：</b>
+					<span>{{data.memberCount}}</span>
+				</li>
+				<li>
+					<b>分会情况：</b>
+					<span>{{data.branchDesc}}</span>
+				</li>
+				<li>
+					<b>会员限定：</b>
+					<span>{{data.memberLimit}}</span>
+				</li>
+				<li>
+					<b>商会宗旨：</b>
+					<span>{{data.purpose}}</span>
+				</li>
+				<li>
+					<b>基本任务：</b>
+					<span>{{data.duty}}</span>
+				</li>
+				<li>
+					<b>服务内容：</b>
+					<span>{{data.service}}</span>
+				</li>
+				<li>
+					<b>其他描述：</b>
+					<span>{{data.otherDesc}}</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- consult center end -->
+</div>
+<div ui-view></div>

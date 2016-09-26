@@ -1,0 +1,69 @@
+<div ng-controller="busNewsList">
+	<!--缓存加载-->
+	<div ng-if='!loaddingHide'>
+		<div id="dd" class="load-container load6"></div>
+		<p class="loadP">玩命加载中...</p>
+	</div>
+	<!-- dialist center start -->
+	<div class="con_pic dialist_pic" ng-show='loaddingHide'>
+		<ul class="dialist_ul">
+			<li>
+				<h4>{{busNewsList.title}}</h4>
+			</li>
+			<li>
+				<p>{{busNewsList.createDate|bigDate}}&nbsp;<span>{{busNewsList.autoId}}</span></p>
+			</li>
+			<li class="content">
+				
+			</li>
+			<!--<li>
+				<h4>{{x.title}}</h4>
+			</li>
+			<li>
+				<p>{{x.creatDate}}&nbsp;<span>{{x.messageType}}</span></p>
+			</li>
+			<li>
+				<img ng-src="{{x.imgSrc}}" alt="">
+			</li>
+			<li>
+				<p>{{x.message}}
+					<br>
+					<br> {{x.intro}}
+					<br>
+					<br> 电话：{{x.tel}}
+					<br> 传真：{{x.faxes}}
+					<br> 邮箱：{{x.email}}
+					<br> 地址：{{x.address}}
+				</p>
+			</li>-->
+		</ul>
+		<!--<ul class="dialist_ul">
+			<li>
+				<h4>
+        深圳市金申金融投资有限公司
+      </h4>
+			</li>
+			<li>
+				<p>2016/04/13 <span>中国电子商会</span></p>
+			</li>
+			<li>
+				<img src="imgage/news_dilst.png" alt="">
+
+			</li>
+			<li>
+				<p>
+					为落实《循环经济发展战略及近期行动计划》，宣传循环经济理念，根据《国家循环经济教育示范idiot管理办法》（发改办环资[2015]2071号）发展改革委、教育部、财政部、旅游局（一下简称四部委）组织专家，对第五批国家循环经济教育示范基地申报单位进行了评审。
+					<br>
+					<br> 上榜全球500强品牌榜单。
+					<br>
+					<br> 电话：0531-5570215；0531-55702126
+					<br> 传真：0531-55702125
+					<br> 邮箱：jnsptsh@163.com
+					<br> 地址：深圳市天桥区清河北路188号
+				</p>
+			</li>
+		</ul>-->
+	</div>
+	<!-- dialist center end -->
+</div>
+<div ui-view></div>

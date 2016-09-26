@@ -1,0 +1,23 @@
+<div ng-controller="company_culture_list">
+	<!--缓存加载-->
+	<!--<div ng-if='!loaddingHide'>
+		<div id="dd" class="load-container load6"></div>
+		<p class="loadP">玩命加载中...</p>
+	</div>-->
+	<!-- dialist center start -->
+	
+	<div class="con_pic dialist_pic">
+		<ul class="dialist_ul">
+			<li>
+				<h4>{{companyCultureList.title}}</h4>
+			</li>
+			<li>
+				<p>{{companyCultureList.createDate|bigDate}}&nbsp;<span>{{companyCultureList.typeId|ctnName}}</span></p>
+			</li>
+			<li class="content">
+				
+			</li>
+		</ul>
+	<!-- dialist center end -->
+</div>
+<div ui-view></div>

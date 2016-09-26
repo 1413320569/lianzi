@@ -1,0 +1,27 @@
+<div ng-controller="lead_dilist">
+	<!--缓存加载-->
+	<!--<div ng-if='!loaddingHide'>
+		<div id="dd" class="load-container load6"></div>
+		<p class="loadP">玩命加载中...</p>
+	</div>-->
+	<!-- consult top end -->
+	<div class="lead_con">
+		<ul>
+			<li>
+				<img ng-src="{{imgShow(leadDilist.imgUrl)}}" alt="">
+			</li>
+			<li>
+				<h4>{{leadDilist.name}}</h4>
+			</li>
+			<li>
+				<p>{{leadDilist.position}}</p>
+			</li>
+			<li>
+				<p class="lead_last">
+					{{leadDilist.introduction}}
+				</p>
+			</li>
+		</ul>
+	</div>
+</div>
+<div ui-view></div>

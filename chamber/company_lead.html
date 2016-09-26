@@ -1,0 +1,29 @@
+<div ng-controller="company_lead">
+	<!--模块空白-->
+	<h4 class="noData" ng-if='noData'>该组织暂无发布动态 </h4>
+	<!--缓存加载-->
+	<!--<div ng-if='!loaddingHide'>
+		<div id="dd" class="load-container load6"></div>
+		<p class="loadP">玩命加载中...</p>
+	</div>-->
+	<!-- consult top end -->
+	<!-- consult center start -->
+	<!--后台数据-->
+	<div class="lead">
+		<ul class="lead_ul">
+			<li ng-repeat='companyLeadInfo in data'>
+				<a ui-sref="company_lead_dilist({orgId:{{orgid}},smallId:{{companyLeadInfo.autoId}}})" ng-click='sendCompanyLead(companyLeadInfo)'>
+					<div class="lead_cen">
+						<img ng-src="{{companyLeadInfo.imgUrl}}" alt="">
+						<div>
+							<h4>{{companyLeadInfo.name|resetTime}}<br><span>{{companyLeadInfo.position}}</span></h4>
+							<p>{{companyLeadInfo.introduction}}</p>
+						</div>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!-- consult center end -->
+</div>
+<div ui-view></div>

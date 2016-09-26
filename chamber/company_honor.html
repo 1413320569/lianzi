@@ -1,0 +1,35 @@
+<div ng-controller="company_honor" class="_main" id="companyHonor">
+	<!--模块空白-->
+	<h4 class="noData" ng-if='noData'>该组织暂无发布动态 </h4>
+	<!--缓存加载-->
+	<!--<div ng-if='!loaddingHide'>
+		<div id="dd" class="load-container load6"></div>
+		<p class="loadP">玩命加载中...</p>
+	</div>-->
+	<!--请求刷新-->
+	<p class="topLoad">请求刷新</p>
+	
+	<!-- mien top end -->
+	<!--后台数据-->
+	<div class="news_paper">
+		<div class="news_lump">
+			<ul class="news_lumpul" ng-repeat='companyHonorIn in dat'>
+				<li ng-repeat='companyHonorInfo in companyHonorIn.Da'>
+					
+					<a ui-sref="company_honor_list({orgId:{{orgid}},ctnId:{{companyHonorInfo.autoId}}})">
+						<div ng-class="divClass(companyHonorInfo.imgUrl)">
+							<p>{{companyHonorInfo.title}}</p>
+							<p>{{companyHonorInfo.createDate|resetTime}}&nbsp;{{companyHonorInfo.createDateTime|dateTime}}</p>
+							
+						</div>
+						<img ng-src='{{companyHonorInfo.imgUrl}}' ng-show='companyHonorInfo.imgUrl' alt="" />
+					</a>
+				</li>
+			</ul>
+			<p class="loadClass" ng-show='loadShow'>正在加载中，请稍后......</p>
+		</div>
+	</div>
+
+	<!-- mien center end -->
+</div>
+<div ui-view></div>

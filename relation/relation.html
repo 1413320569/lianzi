@@ -1,0 +1,49 @@
+<div ng-controller="relation">
+	<!--模块空白-->
+	<h4 class="noData" ng-if='noData'>暂无数据 </h4>
+	<!--缓存加载-->
+	<!--<div ng-if='!loaddingHide'>
+		<div id="dd" class="load-container load6"></div>
+		<p class="loadP">玩命加载中...</p>
+	</div>-->
+	<!-- consult top end -->
+	<!-- consult center start -->
+	<div ng-show='!noData'>
+		<div class="relation_p">
+			<ul>
+				<li>
+					<img ng-src="imgage/relation.png" alt="">
+				</li>
+				<li>
+					<h4>联系人：{{relationInfo.contactPeople}}</h4>
+				</li>
+				<li>
+					<p>联系电话：<a  ng-click='call(relationInfo.contactPhone)'>{{relationInfo.contactPhone}}</a></p>
+				</li>
+				<li>
+					<p>通讯地址：{{relationInfo.contactAddress}}</p>
+				</li>
+				
+			</ul>
+			<!--<ul>
+				<li>
+					<img src="imgage/relation.png" alt="">
+				</li>
+				<li>
+					<h4>联系人：李慧</h4>
+				</li>
+				<li>
+					<p>联系电话：</p>
+				</li>
+				<li>
+					<p>通讯地址：北京市丰台区方庄地区芳城</p>
+				</li>
+				<li class="lead_but">
+					<button><a ng-click='call("18334555135")'>拨打电话</a></button>
+				</li>
+			</ul>-->
+		</div>
+	</div>
+	<!-- consult center end -->
+</div>
+<div ui-view></div>

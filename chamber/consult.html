@@ -1,0 +1,234 @@
+<div ng-controller="commerce" class="consult">
+	
+	<!--  ng-if   判断进入的是商会还是企业-->
+	<div class="consult_bor" ng-if='companyShow'>
+		<!-- about start -->
+		<div class="about">
+			<p>关于我们</p>
+			<div class="about_dl">
+				<dl>
+					<a ui-sref="company_summary({orgId:{{orgid}}})">
+						<dd>
+							<img src="images/qyjj@3x.png" alt="">
+						</dd>
+						<dt>企业简介</dt>
+					</a>
+				</dl>
+				<dl>
+					<a ui-sref="company_lead({orgId:{{orgid}}})">
+						<dd>
+							<img src="images/gltd@3x.png" alt="">
+						</dd>
+						<dt>管理团队</dt>
+					</a>
+				</dl>
+				<dl>
+					<a ui-sref="company_honor({orgId:{{orgid}}})">
+						<dd>
+							<img src="images/qyry@3x.png" alt="">
+						</dd>
+						<dt>企业荣誉</dt>
+					</a>
+				</dl>
+				<dl>
+					<a ui-sref="company_compet({orgId:{{orgid}}})">
+						<dd>
+							<img src="images/zgzz@3x.png" alt="">
+						</dd>
+						<dt>资格资质</dt>
+					</a>
+				</dl>
+				<dl>
+					<a ui-sref="company_culture({orgId:{{orgid}}})">
+						<dd>
+							<img src="images/qywh@3x.png" alt="">
+						</dd>
+						<dt>企业文化</dt>
+					</a>
+				</dl>
+				<!--<dl>
+					<a>
+						<dd>
+
+						</dd>
+						<dt></dt>
+					</a>
+				</dl>-->
+			</div>
+		</div>
+		<!-- about end -->
+		<!-- classify start -->
+		<div class="about">
+			<p>分类信息</p>
+			<div class="about_dl">
+				<dl>
+					<a ui-sref="company_news({orgId:{{orgid}}})">
+						<dd>
+							<img src="images/xwdt@3x.png" alt="">
+						</dd>
+						<dt>新闻动态</dt>
+					</a>
+				</dl>
+				<dl>
+					<a ui-sref="company_notice({orgId:{{orgid}}})">
+						<dd>
+							<img src="images/tzgg@3x.png" alt="">
+						</dd>
+						<dt>通知公告</dt>
+					</a>
+				</dl>
+				<dl>
+					<a ui-sref="company_product({orgId:{{orgid}}})">
+						<dd>
+							<img src="images/zpkx@3x.png" alt="">
+						</dd>
+						<dt>新品快讯</dt>
+					</a>
+				</dl>
+				<!--<dl>
+					<a>
+						<dd>
+
+						</dd>
+						<dt></dt>
+					</a>
+				</dl>
+				<dl>
+					<a>
+						<dd>
+
+						</dd>
+						<dt></dt>
+					</a>
+				</dl>
+				<dl>
+					<a>
+						<dd>
+
+						</dd>
+						<dt></dt>
+					</a>
+				</dl>-->
+			</div>
+		</div>
+		<!-- classify end -->
+	</div>
+	<div class="consult_bor" ng-show='commerceShow'>
+		<div class="about">
+			<p>关于我们</p>
+			<div class="about_dl">
+				<dl>
+					<a ui-sref="summary({orgId:{{orgid}}})">
+						<dd>
+							<img src="images/shjj@3x.png" alt="">
+						</dd>
+						<dt>商会简介</dt>
+					</a>
+				</dl>
+				<dl>
+					<a ui-sref="statutes({orgId:{{orgid}}})">
+						<dd>
+							<img src="images/shzc@3x.png" alt="">
+						</dd>
+						<dt>商会章程</dt>
+					</a>
+				</dl>
+				<dl>
+					<a ui-sref="lead({orgId:{{orgid}}})">
+						<dd>
+							<img src="images/ldbz@3x.png" alt="">
+						</dd>
+						<dt>领导班子</dt>
+					</a>
+				</dl>
+				<dl>
+					<a ui-sref="honor({orgId:{{orgid}}})">
+						<dd>
+							<img src="images/shry@3x.png" alt="">
+						</dd>
+						<dt>商会荣誉</dt>
+					</a>
+				</dl>
+				<!--<dl>
+					<a>
+						<dd>
+
+						</dd>
+						<dt></dt>
+					</a>
+				</dl>
+				<dl>
+					<a>
+						<dd>
+
+						</dd>
+						<dt></dt>
+					</a>
+				</dl>-->
+			</div>
+		</div>
+		<!-- about end -->
+		<!-- classify start -->
+		<div class="about">
+			<p>分类信息</p>
+			<div class="about_dl">
+				<dl>
+					<a ui-sref="news_trend({orgId:{{orgid}}})">
+						<dd>
+							<img src="images/xwdt@3x.png" alt="">
+						</dd>
+						<dt> 新闻动态</dt>
+					</a>
+				</dl>
+				<dl>
+					<a ui-sref="mien({orgId:{{orgid}}})">
+						<dd>
+							<img src="images/hyfc@3x.png" alt="">
+						</dd>
+						<dt>会员风采</dt>
+					</a>
+				</dl>
+				<dl>
+					<a ui-sref="talkwidth({orgId:{{orgid}}})">
+						<dd>
+							<img src="images/hdjl@3x.png" alt="">
+						</dd>
+						<dt>互动交流</dt>
+					</a>
+				</dl>
+				<dl>
+					<a ui-sref="notice({orgId:{{orgid}}})">
+						<dd>
+							<img src="images/tzgg@3x.png" alt="">
+						</dd>
+						<dt>通知公告</dt>
+					</a>
+				</dl>
+				<dl>
+					<a ui-sref="public({orgId:{{orgid}}})">
+						<dd>
+							<img src="images/shkw@3x.png" alt="">
+						</dd>
+						<dt> 商会刊物</dt>
+					</a>
+				</dl>
+				<!--<dl>
+					<a>
+						<dd>
+
+						</dd>
+						<dt></dt>
+					</a>
+				</dl>-->
+			</div>
+		</div>
+		<!-- classify end -->
+	</div>
+	<!-- consult center end -->
+	<!--<div class="other">
+		<h3>更多精彩频道，敬请期待</h3>
+	</div>-->
+	<!-- company end -->
+</div>
+
+<div ui-view></div>

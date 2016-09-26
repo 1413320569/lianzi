@@ -1,0 +1,37 @@
+<div ng-controller="company_summary">
+	<!--模块空白-->
+	<h4 class="noData" ng-if='noData'>该组织暂无发布动态 </h4>
+	<!--缓存加载-->
+	<!--<div ng-if='!loaddingHide'>
+		<div id="dd" class="load-container load6"></div>
+		<p class="loadP">玩命加载中...</p>
+	</div>-->
+	<!-- consult top end -->
+	<!-- consult center start -->
+	<div ng-show='nowShow'>
+		<div class="summary_p">
+			<div class="summary_box">
+				{{data.otherDesc}}
+			</div>
+			<ul>
+				<li><b>成立时间：</b><span>{{data.createDate}} </span></li>
+				<li><b>注册资本：</b><span>{{data.registerCapital}} </span></li>
+				<li><b>发&nbsp;起&nbsp;人：</b><span>{{data.creator}}</span></li>
+				<li><b>经营范围：</b><span>{{data.businessScope}}</span></li>
+				<li><b>员工人数：</b><span>{{data.memberCount}}</span></li>
+				<li><b>分支机构：</b><span>{{data.branchOrg}}</span></li>
+				<li><b>行业地位：</b><span>{{data.industryPosition}}</span></li>
+				<li><b>上市日期：</b><span>{{data.listedDate}}</span></li>
+				<li><b>交易地点：</b><span>{{data.stockExchange}}</span></li>
+				<li><b>股票名称：</b><span>{{data.stockName}}</span></li>
+				<li><b>股票代码：</b><span>{{data.stockCode}}</span></li>
+				<li><b>突出优势：</b><span>{{data.advantage}}</span></li>
+				<li><b>战略目标：</b><span>{{data.strategicTarget}}</span></li>
+				<li><b>其他描述：</b><span>{{data.otherDesc}}</span></li>
+				<li><b>添加时间：</b><span>{{data.createTime}}</span></li>
+			</ul>
+		</div>
+	</div>
+	<!-- consult center end -->
+</div>
+<div ui-view></div>

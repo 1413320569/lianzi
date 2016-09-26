@@ -1,0 +1,22 @@
+<div ng-controller="statutes">
+	<!--模块空白-->
+	<h4 class="noData" ng-if='noData'>该组织暂无发布动态 </h4>
+	<!--缓存加载-->
+	<!--<div ng-if='!loaddingHide'>
+		<div id="dd" class="load-container load6"></div>
+		<p class="loadP">玩命加载中...</p>
+	</div>-->
+	<!-- consult top end -->
+	<!-- consult center start -->
+	<div ng-show='loaddingHide'>
+		
+		<div class="statu_p">
+			
+			<div class="content">
+				
+			</div>
+		</div>
+	</div>
+	<!-- consult center end -->
+</div>
+<div ui-view></div>
